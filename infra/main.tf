@@ -195,6 +195,7 @@ resource "aws_instance" "public_instance_1" {
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.elastic_pub_subnet_1.id
   key_name               = "elastic-demo-key"  # Update this line to use the existing key pair
+  associate_public_ip_address = true
   vpc_security_group_ids = [aws_security_group.bastion_sg.id]
 
   tags = {
