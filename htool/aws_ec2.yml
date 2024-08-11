@@ -1,0 +1,11 @@
+---
+plugin: aws_ec2
+regions:
+  - us-east-1
+filters:
+  #  tag:Name: Bastion1
+   tag:Name: ubuntu-eks
+
+compose:
+  ansible_host: public_ip_address
+
